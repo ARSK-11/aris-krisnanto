@@ -135,7 +135,7 @@ body {
     background: rgba(255, 255, 255, 0.22);
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.241) ;
-    display: inline-block;
+    display: none;
 }
 .menu-ft {
     display: inline-block;
@@ -147,4 +147,53 @@ body {
     background: white;
     height: 2px;
     border: none;
+}
+.show-mn {
+    width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 539px){
+    .bar-btn {
+        display: none;
+    }
+    .menu {
+        display: block;
+        float: left;
+    }
+    .menu-scrooll {
+        float: left;
+        padding: 10px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transition-duration: 0.3s;
+        background: rgba(255, 254, 254, 0.946);
+    }
+    .menu-scrooll > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-scrooll > ul > li {
+        width: 100px;
+        color: rgb(43, 43, 43);
+        line-height: 100px;
+        text-align: center;
+    }
+    .menu-scrooll > ul > li > a {
+        font-size: 21px;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    .menu > .menu-scrooll {
+        display: none;
+        width: 0%;
+        transition-duration: 0.5s;
+    }
+    .menu:focus > .menu-scrooll {
+        display: block;
+        width: 50%;
+    }
 }
