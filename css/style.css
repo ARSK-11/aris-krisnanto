@@ -152,7 +152,7 @@ body {
     width: 100%;
     height: auto;
 }
-@media screen and (max-width: 539px){
+@media only screen and (max-width: 539px){
     .bar-btn {
         display: none;
     }
